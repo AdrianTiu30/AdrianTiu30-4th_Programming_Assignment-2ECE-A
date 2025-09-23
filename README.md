@@ -29,7 +29,7 @@ Mindy.to_csv('Mindy.csv')
 Mindy
 ```
 
-### 1. Create DataFrame
+### 2. Visualization
 
 ### Task:
 1. Create a visualization that shows how the different features contributes to average grade.
