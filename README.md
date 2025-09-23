@@ -8,7 +8,7 @@
 A. Create a filename: Instru = [“Name”, “GEAS”, “Electronics >70”]; where track is constant as Instrumentation and hometown Luzon
 B. Create a filename: Mindy = [ “Name”, “Track”, “Electronics”, “Average >=55”]; where hometown is constant as Mindanao and gender Female
 
-### Code:
+### Code Snippet:
 ```
 import pandas as pd
 
@@ -32,7 +32,7 @@ Mindy
 ### Task
 1. Create a visualization that shows how the different features contributes to average grade.
 
-### Code:
+### Code Snippet:
 ```
 import.matplotlib.pyplot as plt
 
