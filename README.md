@@ -7,6 +7,7 @@
 ### Task:
 A. Create a filename: Instru = [“Name”, “GEAS”, “Electronics >70”]; where track is constant as 
 Instrumentation and hometown Luzon
+
 B. Create a filename: Mindy = [ “Name”, “Track”, “Electronics”, “Average >=55”]; where hometown 
 is constant as Mindanao and gender Female
 
@@ -14,14 +15,17 @@ is constant as Mindanao and gender Female
 ```
 import pandas as pd
 
+# Read file and print
 df = pd.read_excel('board2.xlsx')
 df
 
+# Display specified value with constants (hometown == Luzon, track == Instrumentation) saved under filename Instru
 sub = ['Electronics']
 Instru = df.loc[(df['Hometown'] == 'Luzon) & (df['Track'] == 'Instrumentation') & (df[sub].mean(axis=1) > 70), ['Name', 'GEAS', 'Electronics']]
 Instru.to_csv('Instru.csv')
 Instru
 
+# Display specified value with constants (hometown == Mindanao, Gender == Female, Average >= 55) saved under filename Mindy
 subs = ['Electronics', 'Math', 'GEAS', 'Communication']
 df['Average'] = df[subs].mean(axis=1)
 Mindy = df.loc[(df['Hometown'] == 'Mindanao') & (df['Gender'] == 'Female') & (df['Average'] >= 55), ['Name', 'Track', 'Electronics', 'Average']]
