@@ -86,3 +86,5 @@ Interpretation:
 - The Gender chart shows the average difference between male and female students
 - The Hometown chart shows the average difference between three hometowns, namely: Luzon, Visayas, Mindanao
 - The College Track chart shows the average difference between different track fields in college
+
+# Version 2
