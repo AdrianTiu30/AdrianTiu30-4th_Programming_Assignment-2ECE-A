@@ -27,14 +27,41 @@ Mindy.to_csv('Mindy.csv')
 Mindy
 ```
 
-### Output:
-```
-df
-<img width="484" height="752" alt="image" src="https://github.com/user-attachments/assets/a2e87f95-0afe-4219-8d22-03c4576b8dad" />
+### 1. Create DataFrame
 
-Instru
-<img width="205" height="110" alt="image" src="https://github.com/user-attachments/assets/587218ec-eeb1-4e36-a7dc-c2793556d243" />
+### Task
+1. Create a visualization that shows how the different features contributes to average grade.
 
-Mindy
-<img width="326" height="168" alt="image" src="https://github.com/user-attachments/assets/59e27b2e-533a-4caa-94f4-934e269b827b" />
+### Code:
 ```
+import.matplotlib.pyplot as plt
+
+subs = ['Electronics', 'Math', 'GEAS', 'Communication']
+df['Average'] = df[subs].mean(axis=1)
+plt.figure(figsize=(2,4))
+gender_avg = df.groupby('Gender')['Average'].mean()
+plt.bar(gender_avg.index, gender_avg.values)
+plt.xlabel('Gender')
+plt.ylabel('Average Score')
+
+subs = ['Electronics', 'Math', 'GEAS', 'Communication']
+df['Average'] = df[subs].mean(axis=1)
+plt.figure(figsize=(6,4))
+hometown_avg = df.groupby('Hometown')['Average'].mean()
+plt.bar(hometown_avg.index, hometown_avg.values)
+plt.xlabel('Hometown')
+plt.ylabel('Average Score')
+
+subs = ['Electronics', 'Math', 'GEAS', 'Communication']
+df['Average'] = df[subs].mean(axis=1)
+plt.figure(figsize=(6,4))
+track_avg = df.groupby('Track')['Average'].mean()
+plt.bar(track_avg.index, track_avg.values)
+plt.xlabel('Track')
+plt.ylabel('Average Score')
+```
+
+Interpretation:
+- The Gender chart shows the average difference between male and female students
+- The Hometown chart shows the average difference between three hometowns, namely: Luzon, Visayas, Mindanao
+- The College Track chart shows the average difference between different track fields in college
