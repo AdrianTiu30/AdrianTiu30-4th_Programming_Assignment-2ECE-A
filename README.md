@@ -5,8 +5,10 @@
 ### 1. Create DataFrame
 
 ### Task
-A. Create a filename: Instru = [“Name”, “GEAS”, “Electronics >70”]; where track is constant as Instrumentation and hometown Luzon
-B. Create a filename: Mindy = [ “Name”, “Track”, “Electronics”, “Average >=55”]; where hometown is constant as Mindanao and gender Female
+A. Create a filename: Instru = [“Name”, “GEAS”, “Electronics >70”]; where track is constant as 
+Instrumentation and hometown Luzon
+B. Create a filename: Mindy = [ “Name”, “Track”, “Electronics”, “Average >=55”]; where hometown 
+is constant as Mindanao and gender Female
 
 ### Code Snippet:
 ```
@@ -36,6 +38,7 @@ Mindy
 ```
 import.matplotlib.pyplot as plt
 
+# Bar graph visualization for Gender Average
 subs = ['Electronics', 'Math', 'GEAS', 'Communication']
 df['Average'] = df[subs].mean(axis=1)
 plt.figure(figsize=(2,4))
@@ -44,6 +47,7 @@ plt.bar(gender_avg.index, gender_avg.values)
 plt.xlabel('Gender')
 plt.ylabel('Average Score')
 
+# Bar graph visualization for hometown Average
 subs = ['Electronics', 'Math', 'GEAS', 'Communication']
 df['Average'] = df[subs].mean(axis=1)
 plt.figure(figsize=(6,4))
@@ -52,6 +56,7 @@ plt.bar(hometown_avg.index, hometown_avg.values)
 plt.xlabel('Hometown')
 plt.ylabel('Average Score')
 
+# Bar graph visualization for Track Average
 subs = ['Electronics', 'Math', 'GEAS', 'Communication']
 df['Average'] = df[subs].mean(axis=1)
 plt.figure(figsize=(6,4))
